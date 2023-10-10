@@ -1,20 +1,29 @@
 /* BASIC STYLES HERE */
-label{
+label {
   display: block;
 }
 
-input{
+input {
   width: 100%;
 }
-.car-creator{
+
+.car-creator {
   height: 10vh;
   width: 10vh;
   object-fit: cover;
 }
 
-.car-img{
+.car-img {
   height: 50vh;
   width: 50vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.house-img {
+  height: 45vh;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }

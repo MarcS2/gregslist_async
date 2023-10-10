@@ -33,6 +33,7 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">Houses</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -45,7 +46,110 @@
 
     <section id="router-view">
       <!-- primary viewport -->
+      <!-- <form onsubmit="app.HousesController.newHouse(event)">
+        <div class="mb-2">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="First and Last" maxlength="80" minlength="2">
+        </div>
+        <div class="mb-2">
+          <label for="year">Year</label>
+          <input id="year" type="number" name="year" max='2025' placeholder="Year Built">
+        </div>
+        <div class="mb-2">
+          <label for="bedrooms">Bedrooms</label>
+          <input id="bedrooms" type="number" name="bedrooms" placeholder="Number Of Bedrooms" min="1" max="30">
+        </div>
+        <div class="mb-2">
+          <label for="bathrooms">Bathrooms</label>
+          <input id="bathrooms" type="number" name="bathrooms" placeholder="Number Of Bathrooms" min="1" max="20">
+        </div>
+        <div class="mb-2">
+          <label for="price">Price</label>
+          <input id="price" type="number" name="price" placeholder="Price Amount" min="1" max="3000000">
+        </div>
+        <div class="mb-2">
+          <label for="imgUrl">Image URL</label>
+          <input id="imgUrl" type="text" name="imgUrl" placeholder="Image URL" maxlength="400">
+        </div>
+        <div class="mb-2">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" cols="1" rows="5" placeholder="House Description"
+            maxlength="350"></textarea>
+        </div>
 
+        <div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+
+      </form> -->
+      <div class="container-fluid">
+        <section class="row" id="house-form">
+
+        </section>
+        <section class="row justify-content-around my-3" id="house-cards">
+
+        </section>
+        <!-- <section class="row">
+          <div class="col-12">
+            <form onsubmit="app.HousesController.newHouse(event)">
+              <div class="mb-2">
+                <label for="year">Year</label>
+                <input id="year" type="number" name="year" required placeholder="Year Built">
+              </div>
+              <div class="mb-2">
+                <label for="levels">Levels</label>
+                <input id="levels" type="number" name="levels" required placeholder="Year Built">
+              </div>
+              <div class="mb-2">
+                <label for="bedrooms">Bedrooms</label>
+                <input id="bedrooms" type="number" name="bedrooms" placeholder="Number Of Bedrooms" required>
+              </div>
+              <div class="mb-2">
+                <label for="bathrooms">Bathrooms</label>
+                <input id="bathrooms" type="number" name="bathrooms" placeholder="Number Of Bathrooms" required>
+              </div>
+              <div class="mb-2">
+                <label for="price">Price</label>
+                <input id="price" type="number" name="price" placeholder="Price Amount" required>
+              </div>
+              <div class="mb-2">
+                <label for="imgUrl">Image URL</label>
+                <input id="imgUrl" type="url" name="imgUrl" placeholder="Image URL" maxlength="500" required>
+              </div>
+              <div class="mb-2">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="50" rows="5" placeholder="House Description"
+                  maxlength="5000"></textarea>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+              </div>
+
+            </form>
+          </div>
+        </section> -->
+        <!-- <section class="row">
+          <div class="col-4">
+            <section class="row">
+              <div class="col-12">
+                <img class="house-img" src=https://floorcentral.com/wp-content/uploads/2014/07/sick-house-syndrome.jpg"
+                  alt="house">
+
+              </div>
+            </section>
+          </div>
+          <div class="col-6">
+            <p class="fs-2">${this.creator.name}</p>
+            <p class="fs-4">Listed at: ${this.createdAt}, Edited at: ${this.updatedAt}</p>
+            <p class="fs-5">Levels ${this.levels}, Bathrooms ${this.bathrooms}, Bedrooms ${this.bedrooms} Year Built
+              ${this.year} </p>
+            <p class="fs-4">${this.description}</p>
+            <p class="fs-5">Price: ${this.price}</p>
+
+          </div>
+        </section> -->
+      </div>
     </section>
 
 
