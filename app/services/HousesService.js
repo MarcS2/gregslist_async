@@ -6,6 +6,26 @@ import { api } from "./AxiosService.js"
 
 
 class HousesService {
+  async removeHouse(houseId) {
+    try {
+      const res = await api.delete(`api/houses/${houseId}`)
+      const houseIndex = AppState.houses.findIndex(house => house.Id == houseId)
+      if (houseIndex == -1) {
+        return
+
+      }
+      AppState.houses.splice(houseIndex, 1)
+      AppState.emit('houses')
+    } catch (error) {
+
+    }
+  }
+  async newHouse(houseData) {
+    const res = await api.post('api/houses', houseData)
+    const newHome = new House(res.data)
+    AppState.houses.push(newHome)
+    AppState.emit('houses')
+  }
 
   async getHouses() {
     try {
@@ -19,6 +39,7 @@ class HousesService {
       console.error(error)
     }
   }
+
 
 }
 

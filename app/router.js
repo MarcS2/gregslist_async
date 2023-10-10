@@ -29,11 +29,11 @@ export const router = [
     controller: CarsController,
     view: CarsView
   },
-  // {
-  //   path: '#/houses',
-  //   controller: HousesController,
-  //   view: housesView
-  // },
+  {
+    path: '#/houses',
+    controller: HousesController,
+    view: housesView
+  },
 ]
 
 

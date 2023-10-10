@@ -20,6 +20,12 @@ input {
   object-position: center;
 }
 
+.house-creator {
+  height: 10vh;
+  width: 10vh;
+  object-fit: cover;
+  object-position: center;
+}
 
 .house-img {
   height: 45vh;

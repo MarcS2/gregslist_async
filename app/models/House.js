@@ -1,3 +1,5 @@
+import { AppState } from "../AppState.js"
+
 export class House {
   constructor(data) {
     this.Id = data.id
@@ -29,13 +31,16 @@ export class House {
       </section>
     </div>
     <div class="col-6 border border-2 border-dark">
-      <p class="fs-2">${this.creator.name}</p>
-      <p class="fs-4">Listed at: ${this.createdAt.toLocaleDateString()}, Edited at: ${this.updatedAt.toLocaleDateString()}</p>
+      <p class="fs-2">${this.creator.name} </p>
+      <p class="fs-4">Listed at: ${this.createdAt.toLocaleString()}, Edited at: ${this.updatedAt.toLocaleString()}</p>
       <p class="fs-5">Levels ${this.levels}, Bathrooms ${this.bathrooms}, Bedrooms ${this.bedrooms} Year Built
         ${this.year} </p>
       <p class="fs-4">${this.description}</p>
       <p class="fs-5">Price: ${this.price}</p>
-
+      <img class="img-fluid rounded-circle house-creator" src="${this.creator.picture}" alt="">
+      <div class="text-end">
+      ${this.computeDelButton}
+      </div>
     </div>
   </section>
     `
@@ -52,7 +57,7 @@ export class House {
       </div>
       <div class="mb-2">
         <label for="levels">Levels</label>
-        <input id="levels" type="number" name="levels" required placeholder="Year Built">
+        <input id="levels" type="number" name="levels" required placeholder="Levels">
       </div>
       <div class="mb-2">
         <label for="bedrooms">Bedrooms</label>
@@ -82,6 +87,15 @@ export class House {
 
     </form>
   </div>`
+
+
+  }
+
+  get computeDelButton() {
+    if (AppState.account?.id == this.creatorId) {
+      return ` <button class="btn btn-danger" onclick="app.HousesController.removeHouse('${this.Id}')">Remove House</button>`
+    }
+    return ''
   }
 }
 
